@@ -1,0 +1,118 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ash</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f0f0f0;
+            color: #fff;
+        }
+
+        /* Conteneur vidéo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Place la vidéo derrière tout le contenu */
+            object-fit: cover;
+        }
+
+        /* Style du contenu de la page pour qu'il apparaisse au-dessus de la vidéo */
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .images-container img {
+            margin: 10px;
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .images-container img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Style pour l'image en haut à droite */
+        .top-right-image {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            cursor: pointer;
+        }
+
+        /* Style pour le texte en dessous de l'image en haut à droite */
+        .top-right-text {
+            position: absolute;
+            top: 130px;
+            right: 20px;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Vidéo en arrière-plan -->
+    <video autoplay muted loop class="video-background">
+        <source src="videofont.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos HTML5.
+    </video>
+
+    <div class="content">
+        <h1>Happy Birthday Ash</h1>
+
+        <img src="bouquet.jpg" id="mainImage" style="width:300px; cursor: pointer;">
+
+        <h2 id="clickMessage">Click on the flowers</h2>
+        
+        <a href="affirmation.jpeg" target="_blank">
+            <img src="minmin.jpg_large" alt="Minmin" class="top-right-image">
+        </a>
+        <div class="top-right-text">from minmin and coco</div>
+
+        <div id="additionalImages" class="images-container hidden">
+            <a href="https://open.spotify.com/intl-fr/track/7BRD7x5pt8Lqa1eGYC4dzj?si=fff3d347438940ac" target="_blank">
+                <img src="chihiro.jpg" alt="Chanson préférée">
+            </a>
+            
+            <a href="https://moviesjoy.is/tv/dickinson-46261" target="_blank">
+                <img src="dickinson show poster.jpeg" alt="Emily Dickinson">
+            </a>
+
+            <a href="https://open.spotify.com/playlist/1vGRlbh8H12e500Kyffc01?si=41ebb86df45f4ee9" target="_blank">
+                <img src="You’re my happy place_.jpeg" alt="playlist">
+            </a>
+
+            <a href="https://www.bilibili.tv/en/video/2040550665" target="_blank">
+                <img src="imaginemovie.jpg" alt="Imagine Me And You">
+            </a>
+            
+            <!-- Image qui redirige vers la lettre -->
+            <a href="letter.html" target="_blank">
+                <img src="lettre.jpeg" alt="Clique ici pour un message spécial">
+            </a>
+        </div>
+    </div>
+
+    <!-- Lien vers le fichier JavaScript externe -->
+    <script src="script.js"></script>
+
+</body>
+</html>
